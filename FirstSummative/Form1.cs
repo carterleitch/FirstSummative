@@ -1,4 +1,6 @@
-﻿using System;
+﻿//Created by Carter Leitch, Start date Sept 20th, Finish date Sept 27th.
+//This program will draw the gemini constellation and give a small description.
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,19 +9,195 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
+using System.Media;
 
 namespace FirstSummative
 {
-    public partial class Form1 : Form
+    public partial class Card : Form
     {
-        public Form1()
+        public Card()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Click(object sender, EventArgs e)
         {
-            //Comment
+            Graphics FormGraphics = this.CreateGraphics();
+            Pen Bluepen = new Pen(Color.Blue, 10);
+            Pen Redpen = new Pen(Color.Red, 6);
+            Pen Whitepen = new Pen(Color.White, 2);
+            SolidBrush Bluebrush = new SolidBrush(Color.Blue);
+            SolidBrush Redbrush = new SolidBrush(Color.Red);
+            SolidBrush Lightbluebrush = new SolidBrush(Color.LightBlue);
+            Font drawfont = new Font("Ariel", 18, FontStyle.Bold);
+            Font Textfont = new Font("Ariel", 10);
+            SoundPlayer player = new SoundPlayer(Properties.Resources.Robot_blip_Marianne_Gagnon_120342607);
+            SoundPlayer beep = new SoundPlayer(Properties.Resources.Beep_Ping_SoundBible_com_217088958);
+            //This draws all the stars that the constellation will connect to.
+            Refresh();
+            FormGraphics.DrawEllipse(Bluepen, 135, 90, 3, 3);
+            FormGraphics.FillEllipse(Bluebrush, 132, 87, 10, 10);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Bluepen, 195, 75, 3, 3);
+            FormGraphics.FillEllipse(Bluebrush, 192, 72, 10, 10);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 140, 115, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 138, 113, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 135, 175, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 133, 173, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 100, 225, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 98, 223, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 110, 120, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 108, 118, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 150, 310, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 148, 308, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 165, 220, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 163, 218, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 195, 295, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 193, 293, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 175, 125, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 173, 123, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 205, 90, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 203, 88, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 225, 130, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 223, 128, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 290, 125, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 288, 123, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 240, 205, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 238, 203, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 240, 280, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 238, 278, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 275, 270, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 273, 268, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 295, 290, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 293, 288, 5, 5);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawEllipse(Redpen, 325, 280, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 323, 278, 5, 5);
+            //This block will draw all the lines connecting the points together.//
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 136, 92, 141, 116);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 141, 116, 135, 175);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 135, 175, 100, 225);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 141, 116, 109, 121);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 100, 225, 151, 311);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 135, 175, 165, 220);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 140, 115, 176, 126);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 165, 220, 195, 295);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 176, 126, 226, 131);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 205, 90, 226, 131);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 195, 75, 205, 90);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 225, 130, 290, 125);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 225, 130, 240, 205);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 240, 205, 240, 280);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 240, 205, 275, 270);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 275, 270, 295, 290);
+            player.Play();
+            Thread.Sleep(300);
+            FormGraphics.DrawLine(Whitepen, 295, 290, 325, 280);
+            player.Play();
+            //This block jusr redraws all the dots so the lines are under them.
+            FormGraphics.DrawEllipse(Bluepen, 135, 90, 3, 3);
+            FormGraphics.FillEllipse(Bluebrush, 132, 87, 10, 10);
+            FormGraphics.DrawEllipse(Bluepen, 195, 75, 3, 3);
+            FormGraphics.FillEllipse(Bluebrush, 192, 72, 10, 10);
+            FormGraphics.DrawEllipse(Redpen, 140, 115, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 138, 113, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 135, 175, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 133, 173, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 100, 225, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 98, 223, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 110, 120, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 108, 118, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 150, 310, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 148, 308, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 165, 220, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 163, 218, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 195, 295, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 193, 293, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 175, 125, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 173, 123, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 205, 90, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 203, 88, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 225, 130, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 223, 128, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 290, 125, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 288, 123, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 240, 205, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 238, 203, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 240, 280, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 238, 278, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 275, 270, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 273, 268, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 295, 290, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 293, 288, 5, 5);
+            FormGraphics.DrawEllipse(Redpen, 325, 280, 2, 2);
+            FormGraphics.FillEllipse(Redbrush, 323, 278, 5, 5);
+            beep.Play();
+            FormGraphics.DrawString("Gemini", drawfont, Lightbluebrush, new Rectangle(250, 10, 300, 100));
+            FormGraphics.DrawString("Gemini is one of the constellasions of the zodiac. It was one of the 48 consellasions described by the second century AD astronomer Ptolemy and it remains one of the 88 modern constellasions today. Its name is latin for Twins, and it is associated with the twins Castor and Pollux in greek mythology.", Textfont, Lightbluebrush, new Rectangle(325, 100, 200, 300));
         }
     }
 }

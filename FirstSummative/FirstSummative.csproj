@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Beep Ping-SoundBible.com-217088958.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robot_blip-Marianne_Gagnon-120342607.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FirstSummative.sln" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robot_blip-Marianne_Gagnon-1203426071.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Beep Ping-SoundBible.com-217088958.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
